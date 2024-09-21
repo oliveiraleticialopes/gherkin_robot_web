@@ -20,10 +20,10 @@ abrir avegador
     Open Browser    ${URL}    ${chrome} 
     Set Window Size    1920    1080  
 
-clicar elemento
-    [Arguments]    ${element}    
-    Wait Until Element Is Visible    ${element}    ${TIME_GERAL}
-    Click Element    ${element}
+clicar elemento   
+    [Arguments]    ${locator}
+    Wait Until Element Is Visible    ${locator}    ${TIME_GERAL}
+    Click Element    ${locator}
 
 fechar navegador
     Close Browser

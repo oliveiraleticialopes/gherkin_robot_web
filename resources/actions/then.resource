@@ -2,6 +2,6 @@
 Resource    ../main.resource
 
 *** Keywords ***
-Fill in the email and password fields correctly
-    preencher email
-    preencher senha    
+the home page should appear
+    Wait Until Element Is Visible    ${BOTAO_LOGOUT}   ${TIME_GERAL}
+    

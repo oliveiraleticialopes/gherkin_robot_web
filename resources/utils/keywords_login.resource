@@ -7,3 +7,6 @@ preencher email
 
 preencher senha
     preencher texto    ${CAMPO_LOGIN_SENHA}     ${ADMIN['password']}
+
+clicar botão entrar
+    clicar elemento    ${BOTAO_ENTRAR}
