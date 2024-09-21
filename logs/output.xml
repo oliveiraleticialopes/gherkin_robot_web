@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0.1 (Python 3.12.4 on win32)" generated="2024-09-21T19:09:55.000811" rpa="false" schemaversion="5">
+<suite id="s1" name="Gherkin Robot" source="C:\Users\letic\OneDrive\Documentos\Teste Robot\Projetos\gherkin_robot">
+<suite id="s1-s1" name="Tests" source="C:\Users\letic\OneDrive\Documentos\Teste Robot\Projetos\gherkin_robot\tests">
+<suite id="s1-s1-s1" name="Gherkin Tests Login" source="C:\Users\letic\OneDrive\Documentos\Teste Robot\Projetos\gherkin_robot\tests\gherkin_tests_login.robot">
+<test id="s1-s1-s1-t1" name="Login Success" line="8">
+<kw name="abrir avegador" owner="keywords._utils" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-09-21T19:09:55.240678" level="INFO">Opening browser 'Chrome' to base url 'https://automacao.qacoders-academy.com.br/login'.</msg>
+<arg>${URL}</arg>
+<arg>${chrome}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-09-21T19:09:55.240678" elapsed="2.989889"/>
+</kw>
+<kw name="Set Window Size" owner="SeleniumLibrary">
+<arg>1920</arg>
+<arg>1080</arg>
+<doc>Sets current windows size to given ``width`` and ``height``.</doc>
+<status status="PASS" start="2024-09-21T19:09:58.230567" elapsed="0.366018"/>
+</kw>
+<status status="PASS" start="2024-09-21T19:09:55.240678" elapsed="3.355907"/>
+</kw>
+<kw name="Given the user is on the login page" owner="keywords._utils" source_name="Given ${behavor}">
+<kw name="Run Keyword" owner="BuiltIn">
+<kw name="the user is on the login page" owner="given">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${BOTAO_ENTRAR}</arg>
+<arg>${TIME_GERAL}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-09-21T19:09:58.596585" elapsed="0.014172"/>
+</kw>
+<status status="PASS" start="2024-09-21T19:09:58.596585" elapsed="0.014172"/>
+</kw>
+<arg>${behavor}</arg>
+<doc>Executes the given keyword with the given arguments.</doc>
+<status status="PASS" start="2024-09-21T19:09:58.596585" elapsed="0.014172"/>
+</kw>
+<status status="PASS" start="2024-09-21T19:09:58.596585" elapsed="0.019191"/>
+</kw>
+<kw name="Then Fill in the email and password fields correctly" owner="keywords._utils" source_name="Then ${behavor}">
+<kw name="Run Keyword" owner="BuiltIn">
+<kw name="Fill in the email and password fields correctly" owner="then">
+<kw name="preencher email" owner="keywords_login">
+<kw name="preencher texto" owner="keywords._utils">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${element}</arg>
+<arg>${TIME_GERAL}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-09-21T19:09:58.615776" elapsed="0.012532"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-09-21T19:09:58.628308" level="INFO">Typing text 'sysadmin@qacoders.com' into text field 'id=email'.</msg>
+<arg>${element}</arg>
+<arg>${texto}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-21T19:09:58.628308" elapsed="0.145629"/>
+</kw>
+<arg>${CAMPO_LOGIN_EMAIL}</arg>
+<arg>${ADMIN['mail']}</arg>
+<status status="PASS" start="2024-09-21T19:09:58.615776" elapsed="0.158161"/>
+</kw>
+<status status="PASS" start="2024-09-21T19:09:58.615776" elapsed="0.158161"/>
+</kw>
+<kw name="preencher senha" owner="keywords_login">
+<kw name="preencher texto" owner="keywords._utils">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${element}</arg>
+<arg>${TIME_GERAL}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-09-21T19:09:58.773937" elapsed="0.006504"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-09-21T19:09:58.780441" level="INFO">Typing text '1234@Test' into text field 'id=password'.</msg>
+<arg>${element}</arg>
+<arg>${texto}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-21T19:09:58.780441" elapsed="0.063737"/>
+</kw>
+<arg>${CAMPO_LOGIN_SENHA}</arg>
+<arg>${ADMIN['password']}</arg>
+<status status="PASS" start="2024-09-21T19:09:58.773937" elapsed="0.070241"/>
+</kw>
+<status status="PASS" start="2024-09-21T19:09:58.773937" elapsed="0.070241"/>
+</kw>
+<status status="PASS" start="2024-09-21T19:09:58.615776" elapsed="0.228402"/>
+</kw>
+<arg>${behavor}</arg>
+<doc>Executes the given keyword with the given arguments.</doc>
+<status status="PASS" start="2024-09-21T19:09:58.615776" elapsed="0.228402"/>
+</kw>
+<status status="PASS" start="2024-09-21T19:09:58.615776" elapsed="0.228402"/>
+</kw>
+<kw name="fechar navegador" owner="keywords._utils" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-09-21T19:09:58.845185" elapsed="2.131600"/>
+</kw>
+<status status="PASS" start="2024-09-21T19:09:58.844178" elapsed="2.132607"/>
+</kw>
+<tag>login</tag>
+<status status="PASS" start="2024-09-21T19:09:55.240678" elapsed="5.736107"/>
+</test>
+<status status="PASS" start="2024-09-21T19:09:55.028421" elapsed="5.953016"/>
+</suite>
+<status status="PASS" start="2024-09-21T19:09:55.028421" elapsed="5.953016"/>
+</suite>
+<status status="PASS" start="2024-09-21T19:09:55.000811" elapsed="5.980626"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">login</stat>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Gherkin Robot">Gherkin Robot</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="Tests">Gherkin Robot.Tests</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1-s1" name="Gherkin Tests Login">Gherkin Robot.Tests.Gherkin Tests Login</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
